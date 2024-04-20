@@ -1,0 +1,20 @@
+name: Weather Report
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  weather:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set City Environment Variable
+      run: echo "CITY=<city_name>" >> $GITHUB_ENV
+
+    - name: Display Weather
+      run: |
+        curl wttr.in/${CITY}
