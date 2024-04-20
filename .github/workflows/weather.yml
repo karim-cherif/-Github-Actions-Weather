@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Set City Environment Variable
-      run: echo "CITY=<city_name>" >> $GITHUB_ENV
+      run: echo "CITY=<california>" >> $GITHUB_ENV
 
     - name: Display Weather
       run: |
